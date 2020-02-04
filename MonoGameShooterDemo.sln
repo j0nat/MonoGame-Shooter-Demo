@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29324.140
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXGame", "DXGame\DXGame.csproj", "{C5F2445D-C254-47F6-98BC-0E6460C2821A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HLMapFileLoader", "HLMapFileLoader\HLMapFileLoader.csproj", "{A938DDF9-BB4D-4EDD-B811-CE24502F257F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShooterEngine", "ShooterEngine\ShooterEngine.csproj", "{E6DA9AD3-BC66-4E75-BCD2-2941BE743F5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5F2445D-C254-47F6-98BC-0E6460C2821A}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{C5F2445D-C254-47F6-98BC-0E6460C2821A}.Debug|x86.ActiveCfg = Debug|x86
+		{C5F2445D-C254-47F6-98BC-0E6460C2821A}.Debug|x86.Build.0 = Debug|x86
+		{C5F2445D-C254-47F6-98BC-0E6460C2821A}.Release|Any CPU.ActiveCfg = Release|x86
+		{C5F2445D-C254-47F6-98BC-0E6460C2821A}.Release|x86.ActiveCfg = Release|x86
+		{C5F2445D-C254-47F6-98BC-0E6460C2821A}.Release|x86.Build.0 = Release|x86
+		{A938DDF9-BB4D-4EDD-B811-CE24502F257F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A938DDF9-BB4D-4EDD-B811-CE24502F257F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A938DDF9-BB4D-4EDD-B811-CE24502F257F}.Debug|x86.ActiveCfg = Debug|x86
+		{A938DDF9-BB4D-4EDD-B811-CE24502F257F}.Debug|x86.Build.0 = Debug|x86
+		{A938DDF9-BB4D-4EDD-B811-CE24502F257F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A938DDF9-BB4D-4EDD-B811-CE24502F257F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A938DDF9-BB4D-4EDD-B811-CE24502F257F}.Release|x86.ActiveCfg = Release|x86
+		{A938DDF9-BB4D-4EDD-B811-CE24502F257F}.Release|x86.Build.0 = Release|x86
+		{E6DA9AD3-BC66-4E75-BCD2-2941BE743F5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6DA9AD3-BC66-4E75-BCD2-2941BE743F5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6DA9AD3-BC66-4E75-BCD2-2941BE743F5F}.Debug|x86.ActiveCfg = Debug|x86
+		{E6DA9AD3-BC66-4E75-BCD2-2941BE743F5F}.Debug|x86.Build.0 = Debug|x86
+		{E6DA9AD3-BC66-4E75-BCD2-2941BE743F5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6DA9AD3-BC66-4E75-BCD2-2941BE743F5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6DA9AD3-BC66-4E75-BCD2-2941BE743F5F}.Release|x86.ActiveCfg = Release|x86
+		{E6DA9AD3-BC66-4E75-BCD2-2941BE743F5F}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D347FE2B-EBF3-4B0C-944D-4BA2F9460B35}
+	EndGlobalSection
+EndGlobal
