@@ -78,7 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="BulletSharp">
-      <HintPath>D:\Repository\DemoGame\MapPhysicsDemo\MapPhysicsDemo\bin\DesktopGL\AnyCPU\Debug\BulletSharp.dll</HintPath>
+      <HintPath>..\bin\BulletSharp.dll</HintPath>
     </Reference>
     <Reference Include="MonoGame.Framework, Version=3.7.1.189, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
