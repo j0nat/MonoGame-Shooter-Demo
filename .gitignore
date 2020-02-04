@@ -4,6 +4,8 @@ packages
 *.ide-wal
 *.ide
 
+
+
 # Created by https://www.gitignore.io/api/csharp,visualstudio
 
 ### Csharp ###
@@ -439,3 +441,6 @@ __pycache__/
 
 # End of https://www.gitignore.io/api/csharp,visualstudio
 *.sfk
+
+!/ShooterEngine/Debug
+!/bin
