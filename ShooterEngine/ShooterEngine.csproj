@@ -69,6 +69,11 @@
     <Compile Include="CharacterController.cs" />
     <Compile Include="CustomVertexFormat.cs" />
     <Compile Include="Debug\FrameCounter.cs" />
+    <Compile Include="Lighting\Effects\MeshEffect.cs" />
+    <Compile Include="Lighting\Effects\ShadowMapEffect.cs" />
+    <Compile Include="Lighting\Light.cs" />
+    <Compile Include="Lighting\LightCamera.cs" />
+    <Compile Include="Lighting\LightRenderer.cs" />
     <Compile Include="ShooterEngineGame.cs" />
     <Compile Include="Mesh.cs" />
     <Compile Include="Physics.cs" />

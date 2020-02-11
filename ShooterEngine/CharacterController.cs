@@ -135,7 +135,8 @@ namespace ShooterEngine
 
             if (ms.LeftButton == ButtonState.Released && previousMouseState.LeftButton == ButtonState.Pressed)
             {
-                worldRenderer.ShootCube(target, GetCameraDirection());
+                // Out of service...
+                // worldRenderer.ShootCube(target, GetCameraDirection());
             }
 
             float deltaX;

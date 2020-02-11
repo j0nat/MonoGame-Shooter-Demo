@@ -35,7 +35,7 @@ namespace ShooterEngine
             Matrix[] modelTransforms = new Matrix[skyDome.Bones.Count];
             skyDome.CopyAbsoluteBoneTransformsTo(modelTransforms);
 
-            Matrix wMatrix = Matrix.CreateTranslation(0, 0, 0) * Matrix.CreateScale(300) * Matrix.CreateTranslation(camera.Position);
+            Matrix wMatrix = Matrix.CreateTranslation(0, 0, 0) * Matrix.CreateScale(300);
             foreach (ModelMesh mesh in skyDome.Meshes)
             {
                 foreach (BasicEffect currentEffect in mesh.Effects)

@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 
 using Microsoft.Xna.Framework;
+using ShooterEngine.Lighting.Effects;
 
 namespace ShooterEngine
 {
@@ -52,35 +53,37 @@ namespace ShooterEngine
 
             if (poly.Vertices.Count == 5)
             {
-                listVertex.Add(GetVertexFormat(poly.Vertices[1], poly.TextureScales[1], normal));
-                listVertex.Add(GetVertexFormat(poly.Vertices[3], poly.TextureScales[3], normal));
-                listVertex.Add(GetVertexFormat(poly.Vertices[4], poly.TextureScales[4], normal));
+                listVertex.Add(GetVertexFormat(poly.Vertices[1], poly.TextureScales[1], CalculateNormal(poly.Vertices[1], poly.Vertices[3], poly.Vertices[4])));
+                listVertex.Add(GetVertexFormat(poly.Vertices[3], poly.TextureScales[3], CalculateNormal(poly.Vertices[1], poly.Vertices[3], poly.Vertices[4])));
+                listVertex.Add(GetVertexFormat(poly.Vertices[4], poly.TextureScales[4], CalculateNormal(poly.Vertices[1], poly.Vertices[3], poly.Vertices[4])));
 
-                listVertex.Add(GetVertexFormat(poly.Vertices[0], poly.TextureScales[0], normal));
-                listVertex.Add(GetVertexFormat(poly.Vertices[1], poly.TextureScales[1], normal));
-                listVertex.Add(GetVertexFormat(poly.Vertices[4], poly.TextureScales[4], normal));
+                listVertex.Add(GetVertexFormat(poly.Vertices[0], poly.TextureScales[0], CalculateNormal(poly.Vertices[0], poly.Vertices[1], poly.Vertices[4])));
+                listVertex.Add(GetVertexFormat(poly.Vertices[1], poly.TextureScales[1], CalculateNormal(poly.Vertices[0], poly.Vertices[1], poly.Vertices[4])));
+                listVertex.Add(GetVertexFormat(poly.Vertices[4], poly.TextureScales[4], CalculateNormal(poly.Vertices[0], poly.Vertices[1], poly.Vertices[4])));
 
-                listVertex.Add(GetVertexFormat(poly.Vertices[1], poly.TextureScales[1], normal));
-                listVertex.Add(GetVertexFormat(poly.Vertices[2], poly.TextureScales[2], normal));
-                listVertex.Add(GetVertexFormat(poly.Vertices[3], poly.TextureScales[3], normal));
+                listVertex.Add(GetVertexFormat(poly.Vertices[1], poly.TextureScales[1], CalculateNormal(poly.Vertices[1], poly.Vertices[2], poly.Vertices[3])));
+                listVertex.Add(GetVertexFormat(poly.Vertices[2], poly.TextureScales[2], CalculateNormal(poly.Vertices[1], poly.Vertices[2], poly.Vertices[3])));
+                listVertex.Add(GetVertexFormat(poly.Vertices[3], poly.TextureScales[3], CalculateNormal(poly.Vertices[1], poly.Vertices[2], poly.Vertices[3])));
+                System.Diagnostics.Debug.WriteLine("5");
             }
             else
             if (poly.Vertices.Count == 3)
             {
-                listVertex.Add(GetVertexFormat(poly.Vertices[0], poly.TextureScales[0], normal));
-                listVertex.Add(GetVertexFormat(poly.Vertices[1], poly.TextureScales[1], normal));
-                listVertex.Add(GetVertexFormat(poly.Vertices[2], poly.TextureScales[2], normal));
+                listVertex.Add(GetVertexFormat(poly.Vertices[0], poly.TextureScales[0], CalculateNormal(poly.Vertices[0], poly.Vertices[1], poly.Vertices[2])));
+                listVertex.Add(GetVertexFormat(poly.Vertices[1], poly.TextureScales[1], CalculateNormal(poly.Vertices[0], poly.Vertices[1], poly.Vertices[2])));
+                listVertex.Add(GetVertexFormat(poly.Vertices[2], poly.TextureScales[2], CalculateNormal(poly.Vertices[0], poly.Vertices[1], poly.Vertices[2])));
+                System.Diagnostics.Debug.WriteLine("3");
             }
             else
             if (poly.Vertices.Count == 4)
             {
-                listVertex.Add(GetVertexFormat(poly.Vertices[3], poly.TextureScales[3], normal));
-                listVertex.Add(GetVertexFormat(poly.Vertices[0], poly.TextureScales[0], normal));
-                listVertex.Add(GetVertexFormat(poly.Vertices[1], poly.TextureScales[1], normal));
+                listVertex.Add(GetVertexFormat(poly.Vertices[3], poly.TextureScales[3], CalculateNormal(poly.Vertices[3], poly.Vertices[0], poly.Vertices[1])));
+                listVertex.Add(GetVertexFormat(poly.Vertices[0], poly.TextureScales[0], CalculateNormal(poly.Vertices[3], poly.Vertices[0], poly.Vertices[1])));
+                listVertex.Add(GetVertexFormat(poly.Vertices[1], poly.TextureScales[1], CalculateNormal(poly.Vertices[3], poly.Vertices[0], poly.Vertices[1])));
 
-                listVertex.Add(GetVertexFormat(poly.Vertices[2], poly.TextureScales[2], normal));
-                listVertex.Add(GetVertexFormat(poly.Vertices[3], poly.TextureScales[3], normal));
-                listVertex.Add(GetVertexFormat(poly.Vertices[1], poly.TextureScales[1], normal));
+                listVertex.Add(GetVertexFormat(poly.Vertices[2], poly.TextureScales[2], CalculateNormal(poly.Vertices[2], poly.Vertices[3], poly.Vertices[1])));
+                listVertex.Add(GetVertexFormat(poly.Vertices[3], poly.TextureScales[3], CalculateNormal(poly.Vertices[2], poly.Vertices[3], poly.Vertices[1])));
+                listVertex.Add(GetVertexFormat(poly.Vertices[1], poly.TextureScales[1], CalculateNormal(poly.Vertices[2], poly.Vertices[3], poly.Vertices[1])));
             }
             else
             if (poly.Vertices.Count == 6)
@@ -100,6 +103,8 @@ namespace ShooterEngine
                 listVertex.Add(GetVertexFormat(poly.Vertices[1], poly.TextureScales[1], normal));
                 listVertex.Add(GetVertexFormat(poly.Vertices[3], poly.TextureScales[3], normal));
                 listVertex.Add(GetVertexFormat(poly.Vertices[4], poly.TextureScales[4], normal));
+
+                System.Diagnostics.Debug.WriteLine("6");
             }
             else
             if (poly.Vertices.Count == 7)
@@ -123,6 +128,8 @@ namespace ShooterEngine
                 listVertex.Add(GetVertexFormat(poly.Vertices[2], poly.TextureScales[2], normal));
                 listVertex.Add(GetVertexFormat(poly.Vertices[3], poly.TextureScales[3], normal));
                 listVertex.Add(GetVertexFormat(poly.Vertices[4], poly.TextureScales[4], normal));
+
+                System.Diagnostics.Debug.WriteLine("7");
             }
             else
             if (poly.Vertices.Count == 8)
@@ -150,9 +157,22 @@ namespace ShooterEngine
                 listVertex.Add(GetVertexFormat(poly.Vertices[1], poly.TextureScales[1], normal));
                 listVertex.Add(GetVertexFormat(poly.Vertices[2], poly.TextureScales[2], normal));
                 listVertex.Add(GetVertexFormat(poly.Vertices[7], poly.TextureScales[7], normal));
+
+                System.Diagnostics.Debug.WriteLine("8");
             }
 
             return listVertex;
+        }
+
+        private Vector3 CalculateNormal(Vector3 A, Vector3 B, Vector3 C)
+        {
+            var ab = A - B;
+            var cb = C - B;
+
+            ab.Normalize();
+            cb.Normalize();
+
+            return Vector3.Cross(ab, cb);
         }
 
         private VertexBuffer GetVertexBuffer(List<CustomVertexFormat> listVertex)
@@ -164,25 +184,24 @@ namespace ShooterEngine
             return vertexBuffer;
         }
 
-        public void Draw(BasicEffect effect, Camera camera)
+        public void Draw()
         {
             for (int i = 0; i < brush.polygons.Count; i++)
             {
-                Matrix transform = Matrix.CreateTranslation(new Vector3(0, 0, 0));
+                graphicsDevice.SetVertexBuffer(listVertexBuffer[i]);
+                graphicsDevice.DrawPrimitives(PrimitiveType.TriangleList, 0, listVertexBuffer[i].VertexCount / 3);
+            }
+        }
 
-                effect.World = transform;
-                effect.View = camera.View;
-                effect.Projection = camera.Projection;
-                effect.TextureEnabled = true;
+        public void Draw(MeshEffect effect)
+        {
+            for (int i = 0; i < brush.polygons.Count; i++)
+            {
                 effect.Texture = brush.polygons[i].Texture;
+                effect.Apply();
 
-                foreach (EffectPass pass in effect.CurrentTechnique.Passes)
-                {
-                    pass.Apply();
-
-                    graphicsDevice.SetVertexBuffer(listVertexBuffer[i]);
-                    graphicsDevice.DrawPrimitives(PrimitiveType.TriangleList, 0, listVertexBuffer[i].VertexCount / 3);
-                }
+                graphicsDevice.SetVertexBuffer(listVertexBuffer[i]);
+                graphicsDevice.DrawPrimitives(PrimitiveType.TriangleList, 0, listVertexBuffer[i].VertexCount / 3);
             }
         }
     }

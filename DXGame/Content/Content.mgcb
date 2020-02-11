@@ -13,6 +13,18 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin Effects/Mesh.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:Effects/Mesh.fx
+
+#begin Effects/ShadowMap.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:Effects/ShadowMap.fx
+
 #begin Fonts/HelpFont.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor

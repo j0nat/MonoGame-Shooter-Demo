@@ -28,7 +28,7 @@ namespace ShooterEngine
             base.Initialize();
         }
 
-        public override void Draw(GameTime gameTime)
+        public void Draw()
         {
             foreach (KeyValuePair<RigidBody, Model> model in models)
             {
@@ -47,8 +47,6 @@ namespace ShooterEngine
                     mesh.Draw();
                 }
             }
-
-            base.Draw(gameTime);
         }
 
         public void Shoot(Model cubeModel, Vector3 cameraPosition, Vector3 destination)

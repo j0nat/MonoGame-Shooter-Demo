@@ -20,7 +20,11 @@ namespace ShooterEngine
 
         public ShooterEngineGame()
         {
-            graphics = new GraphicsDeviceManager(this);
+            graphics = new GraphicsDeviceManager(this)
+            {
+                PreferredDepthStencilFormat = DepthFormat.Depth24Stencil8
+            };
+
             graphics.GraphicsProfile = GraphicsProfile.HiDef;
             
             Content.RootDirectory = "Content";
